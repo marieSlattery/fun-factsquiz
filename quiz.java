@@ -2,38 +2,56 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class quiz extends JFrame implements ActionListener{
-    
-    JButton TrueorFalse;
-	JButton MultipleChoice;
+public class quiz{
+
+
+
+	JLabel infoLabel;
+	JButton tfButton,multipleButton;
 	
-    public static void main (String [] args) {
-		quiz mine = new quiz();
-        mine.setVisible(true);
-    }
+	
+	public quiz()
+		{	 
+			 JFrame jFrameWindow = new JFrame("Fun Facts-Quiz");
+			 			 			 
+			 FlowLayout flowLayout = new FlowLayout();
+			 
+		     jFrameWindow.setLayout(flowLayout);
+		     		     	     		 
+			 jFrameWindow.setSize(400,500);
+			 
+			 jFrameWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			 
+     		 infoLabel = new JLabel("Please choose which quiz you want to play");				 
+ 			 jFrameWindow.add(infoLabel);
+     		 
+     		 tfButton = new JButton("True/False");
+     		 jFrameWindow.add(tfButton);
+     		 
+     		 multipleButton = new JButton("Multiple Choice");
+     		 jFrameWindow.add(multipleButton);
+ 			 
+ 			 	 		 		 				 
+			 EventHandler handler = new EventHandler();
+			 
+			 tfButton.addActionListener(handler);
+			 multipleButton.addActionListener(handler);
+			 			 	 	 
+			 jFrameWindow.setVisible(true);
+		}
+			public static void main(String args[])
+		{	 		
+			 quiz guiApp = new quiz();
+		}
+		
+		private class EventHandler implements ActionListener{
 
-    public quiz () {
-        setTitle ("This is a Fun-Facts Quiz");
-        setSize (500, 600);
-        setDefaultCloseOperation( EXIT_ON_CLOSE );
-
-        
-        Container contentPane = getContentPane();
-        contentPane.setBackground (Color.red);
-        contentPane.setLayout(null);
-        
-        
-        JButton TrueorFalse = new JButton ("True or False");
-        JButton MultipleChoice= new JButton ("Multiple Choice");
-        
-        TrueorFalse .setBounds (130,150,100,60);
-        MultipleChoice .setBounds (130,150,100,60);
-        TrueorFalse.addActionListener (this);
-        MultipleChoice.addActionListener (this);
-        contentPane.add(TrueorFalse);
-        contentPane.add(MultipleChoice);
-        
-    }
-    }
-     public void actionPerformed(ActionEvent event) {
+		public void actionPerformed(ActionEvent e)
+		{
+			if(e.getSource()==tfButton 
+		}		 	 			 
+		
+		
+		
+				
 }
