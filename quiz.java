@@ -7,7 +7,7 @@ public class quiz{
 
 
 	JLabel infoLabel;
-	JButton tfButton,multipleButton;
+	JButton oneButton,twoButton;
 	
 	
 	public quiz()
@@ -18,38 +18,38 @@ public class quiz{
 			 
 		     jFrameWindow.setLayout(flowLayout);
 		     		     	     		 
-			 jFrameWindow.setSize(400,500);
+			 jFrameWindow.setSize(600,600);
 			 
 			 jFrameWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			 
-     		 infoLabel = new JLabel("Please choose which quiz you want to play");				 
+     		 infoLabel = new JLabel("Welcome to the Fun Facts Quiz");				 
  			 jFrameWindow.add(infoLabel);
      		 
-     		 tfButton = new JButton("True/False");
-     		 jFrameWindow.add(tfButton);
+     		 tfButton = new JButton("One Player");
+     		 jFrameWindow.add(oneButton);
      		 
-     		 multipleButton = new JButton("Multiple Choice");
-     		 jFrameWindow.add(multipleButton);
+     		 multipleButton = new JButton("Two Player");
+     		 jFrameWindow.add(twoButton);
  			 
  			 	 		 		 				 
-			 EventHandler handler = new EventHandler();
+		 EventHandler handler = new EventHandler();
 			 
-			 tfButton.addActionListener(handler);
-			 multipleButton.addActionListener(handler);
+		 oneButton.addActionListener(handler);
+		 twoButton.addActionListener(handler);
 			 			 	 	 
-			 jFrameWindow.setVisible(true);
+		 jFrameWindow.setVisible(true);
 		}
-			public static void main(String args[])
+		public static void main(String args[])
 		{	 		
-			 quiz guiApp = new quiz();
+		 quiz guiApp = new quiz();
 		}
 		
-		private class EventHandler implements ActionListener{
+	private class EventHandler implements ActionListener{
 
-		public void actionPerformed(ActionEvent e)
-		{
-			if(e.getSource()==tfButton 
-		}		 	 			 
+	public void actionPerformed(ActionEvent e)
+	{
+		if(e.getSource()==oneButton 
+	}		 	 			 
 		
 		
 		
