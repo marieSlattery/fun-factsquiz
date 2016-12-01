@@ -1,7 +1,7 @@
 public class Player extends person {
 	
-	private int playernum;
-  private String name;							 		
+	public int playernum;
+  public String name;							 		
   		
   public playernum() {
   

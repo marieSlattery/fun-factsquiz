@@ -18,6 +18,11 @@ class  Quiz extends JFrame implements ActionListener{
             int qaid;
             HashMap<Integer, String> map;
 
+
+	
+
+
+
             Quiz(){
                       initializedata();
                       setTitle("Fun Facts-Quiz");
@@ -85,7 +90,7 @@ class  Quiz extends JFrame implements ActionListener{
 
 
         public void initializedata(){
-                        //qpa stores pairs of question and its possible answers
+                        //qpa stores questions and its possible answers 
                         qpa=new String[10][5];
 
                         qpa[0][0]="Whats the capital of France?";
@@ -149,7 +154,7 @@ class  Quiz extends JFrame implements ActionListener{
                         qpa[9][4]="Yogi Bear";
 
 
-                        //qca stores pairs of question and its correct answer
+                        //qca stores questions and the correct answers
                         qca=new String[10][2];
 
                         qca[0][0]="Whats the capital of France?";
@@ -286,6 +291,13 @@ class  Quiz extends JFrame implements ActionListener{
 
       public static void main(String args[]){
                    new Quiz();
+
+
+public ArrayList<Score> getScores() {
+        loadScoreFile();
+        sort();
+        return scores;
+    }
 
       }
 
